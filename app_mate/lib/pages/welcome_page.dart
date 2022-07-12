@@ -1,10 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 import '../widgets/app_large_text.dart';
 import '../widgets/app_text.dart';
-import '../widgets/button.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -27,6 +24,7 @@ class _WelcomePageState extends State<WelcomePage> {
                   height: double.maxFinite,
                   decoration: BoxDecoration(
                       image: DecorationImage(
+                          // ignore: prefer_interpolation_to_compose_strings
                           image: AssetImage("img/" + images[index]),
                           fit: BoxFit.cover)),
                   child: Container(
@@ -39,10 +37,10 @@ class _WelcomePageState extends State<WelcomePage> {
                               children: [
                                 AppLargeText(text: "Matematica"),
                                 AppText(text: "Sumas"),
-                                SizedBox(
+                                const SizedBox(
                                   height: 15,
                                 ),
-                                Container(
+                                SizedBox(
                                     width: 250,
                                     child: AppText(
                                       text:
@@ -50,12 +48,21 @@ class _WelcomePageState extends State<WelcomePage> {
                                       color: Colors.black87,
                                       size: 14,
                                     )),
-                                SizedBox(
+                                const SizedBox(
                                   height: 25,
                                 ),
-                                Button(
-                                  width: 160,
-                                )
+                                MaterialButton(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(18.0),
+                                      side: const BorderSide(
+                                          color: Colors.white)),
+                                  minWidth: 200.0,
+                                  height: 40.0,
+                                  onPressed: () {},
+                                  color: Colors.lightGreen,
+                                  child: const Text("Aprender",
+                                      style: TextStyle(color: Colors.white)),
+                                ),
                               ])
                         ],
                       )));
