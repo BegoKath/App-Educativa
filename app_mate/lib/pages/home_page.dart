@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          title: const Text('School Quiz'),
+          title: const Text('Unidad Educativa Luxemburgo'),
           bottom: PreferredSize(
             preferredSize: const Size.fromHeight(50),
             child: Container(
@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
           flexibleSpace: Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [Colors.deepOrange, Colors.purple],
+                colors: [Color.fromARGB(255, 245, 192, 21), Color.fromARGB(255, 244, 118, 39)],
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
               ),
@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           Text(
-            'Hola! Es hora de aprender',
+            '¡Hola! Es momento de aprender matemática con nuestras preguntas y desmostrar tu conocimiento en la escuela. ',
             style: TextStyle(fontSize: 16, color: Colors.white),
           ),
         ],
@@ -75,7 +75,7 @@ class HomePage extends StatelessWidget {
           Container(
             alignment: Alignment.centerLeft,
             child: const Text(
-              'Popular',
+              'Visto recientemente',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ),

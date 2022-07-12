@@ -49,7 +49,7 @@ class _QuestionsWidgetState extends State<QuestionsWidget> {
             ),
             const SizedBox(height: 8),
             const Text(
-              'Choose your answer from below',
+              'Elige la respuesta correcta:',
               style: TextStyle(fontStyle: FontStyle.italic, fontSize: 16),
             ),
             const SizedBox(height: 32),
